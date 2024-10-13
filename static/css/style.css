@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+body{
+    overflow: hidden;
+}
+.point{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transition: all 7s ease;
+}
+.orange{
+    background-color: #ffaa00;
+}
+.vert{
+    background-color: #50e8d1;
+}
+.content{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+}
+.title{
+    color: #ffaa00;
+    font-size: 24px;
+}
+.plant-type{
+    width: fit-content;
+    position: relative;
+}
+.plant-type span{
+    position: absolute;
+    top: 10px;
+    left: 7px;
+    transition: all .5s ease;
+    font-size: 13px;
+    z-index: 1;
+}
+.plant-type input{
+    width: 440px;
+    height: 40px;
+    outline: none;
+    padding-left: 7px;
+}
+.sepal input{
+    border: 1px solid #ffaa00;
+    color: #ffaa00;
+    border-radius: 5px;
+}
+.sepal span{
+    color: rgba(255, 170, 0,.7);
+}
+.petal input{
+    border: 1px solid #50e8d1;
+    color: #50e8d1;
+    border-radius: 5px;
+}
+.petal span{
+    color: rgba(80, 232, 209,.7);
+}
+
+.plant-type input:valid ~ span,
+.plant-type input:focus ~ span
+{
+    transform: translate(5px,-17px);
+    font-size: 12px;
+    background-color: white;
+    padding:  0 5px;
+}
+.sepal input:valid ~ span,
+.sepal input:focus ~ span{
+    color: #ffaa00;
+}
+.petal input:valid ~ span,
+.petal input:focus ~ span{
+    color: #50e8d1;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+button{
+    padding: 12px 0;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right, #50e8d1 0%,#ffaa00 100%);
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all .5s ease;
+}
+button:hover{
+    transform: translateY(-5px);
+}
+.result-versi{
+    color: #50e8d1;
+}
+.result-seto{
+    color: #ffaa00;
+}

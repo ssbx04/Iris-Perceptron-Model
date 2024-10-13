@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perceptron Classifier</title>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'css/style.css')}}">
+</head>
+<body>
+    <div class="content">
+        <p class="title">Perceptron Flower Classifier Test Form</p>
+        <form action="/predict" method="post">
+            <div class="plant-type sepal">
+                <input type="text" name="sepal_length" id="sepal" required = "required" autocomplete="off">
+                <span>Sepal Length</span>
+            </div>
+            <div class="plant-type petal">
+                <input type="text" name="petal_length" id="petal" required = "required" autocomplete="off">
+                <span>Petal Length</span>
+            </div>
+            <button>Predict</button>
+        </form>
+    </div>
+    <script src="{{url_for('static',filename = 'js/script.js')}}"></script>
+</body>
+</html>
